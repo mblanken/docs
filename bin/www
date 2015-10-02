@@ -14,8 +14,10 @@ var config = require('../config/config');
  */
 
 //var port = normalizePort(process.env.PORT || '3000');
-var port = normalizePort(config.listen_port);
-app.set('port', port);
+//var port = normalizePort(config.listen_port);
+var port = normalizePort(process.env.port);
+//app.set('port', port);
+app.set('port', process.env.port);
 
 /**
  * Create HTTP server.
